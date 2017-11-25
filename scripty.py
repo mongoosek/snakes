@@ -17,7 +17,7 @@ output = p.stdout.read()
 print output
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 driver.get("http://www.adidas.com/yeezy")
 elem = driver.find_elements_by_xpath("//*[contains(text(), 'SIZE CHART')]")
 while(len(elem)==0):
