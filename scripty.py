@@ -2,7 +2,6 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import subprocess
-import requests
 
 output = "undefined"
 
@@ -18,7 +17,7 @@ output = p.stdout.read()
 print output
 
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 driver.get("http://www.adidas.com/yeezy")
 elem = driver.find_elements_by_xpath("//*[contains(text(), 'SIZE CHART')]")
 while(len(elem)==0):
